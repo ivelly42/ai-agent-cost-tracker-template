@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Fast $203 team request
+    url: https://ivelly42.github.io/agent-ops-command-center/team-checkout-request.html
+    about: Open the main product request path for the seven-seat team license.
+  - name: Buy page
+    url: https://ivelly42.github.io/agent-ops-command-center/buy.html
+    about: Review the product preview, pricing, proof links, and revenue rule.
+  - name: Revenue proof rule
+    url: https://ivelly42.github.io/agent-ops-command-center/revenue-proof.html
+    about: Revenue is counted only after checkout, receipt, payout, or seller-dashboard proof exists.

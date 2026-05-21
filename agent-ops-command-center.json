@@ -1,0 +1,18 @@
+{
+  "name": "AI Agent Cost Tracker Template",
+  "source_product": "Agent Ops Command Center",
+  "description": "Discovery mirror for an AI agent cost tracker template and the Agent Ops Notion/spreadsheet template pack.",
+  "individual_price_usd": 29,
+  "team_license_price_usd": 203,
+  "target_revenue_usd": 200,
+  "cost_tracker_page": "https://ivelly42.github.io/agent-ops-command-center/cost-tracker-template.md",
+  "roi_calculator": "https://ivelly42.github.io/agent-ops-command-center/roi-calculator.html",
+  "cost_leak_audit": "https://ivelly42.github.io/agent-ops-command-center/cost-leak-audit.html",
+  "fast_team_checkout_request": "https://ivelly42.github.io/agent-ops-command-center/team-checkout-request.html",
+  "buy_page": "https://ivelly42.github.io/agent-ops-command-center/buy.html",
+  "catalog": "https://ivelly42.github.io/agent-ops-command-center/catalog.json",
+  "metrics": "https://ivelly42.github.io/agent-ops-command-center/metrics/status.json",
+  "main_repository": "https://github.com/ivelly42/agent-ops-command-center",
+  "paid_zip_public": false,
+  "revenue_rule": "Revenue is proven only by checkout, receipt, payout, or seller-dashboard evidence."
+}

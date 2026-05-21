@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AI Agent Cost Tracker Template</title>
+    <meta name="description" content="Free AI agent cost tracker template for Codex, Claude Code, Cursor, and local agents. Routes to the Agent Ops $203 team license path.">
+    <meta property="og:title" content="AI Agent Cost Tracker Template">
+    <meta property="og:description" content="Track token estimates, direct cost, human minutes saved, ROI notes, and cost leaks for AI coding-agent work.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ivelly42.github.io/ai-agent-cost-tracker-template/">
+    <style>
+      :root {
+        color-scheme: light;
+        --bg: #f6f8f3;
+        --ink: #131313;
+        --muted: #5d6258;
+        --line: #d5dccd;
+        --card: #fffefa;
+        --accent: #15803d;
+        --soft: #edf8ef;
+      }
+
+      * { box-sizing: border-box; }
+
+      body {
+        margin: 0;
+        overflow-x: hidden;
+        background: var(--bg);
+        color: var(--ink);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      }
+
+      header,
+      main,
+      footer {
+        width: min(1120px, calc(100% - 36px));
+        margin: 0 auto;
+      }
+
+      header {
+        min-height: 72px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .brand {
+        color: inherit;
+        font-weight: 900;
+        text-decoration: none;
+      }
+
+      nav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+        font-size: 14px;
+        font-weight: 800;
+      }
+
+      nav a,
+      .button {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .hero {
+        min-height: calc(100vh - 72px);
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(320px, 0.92fr);
+        gap: 48px;
+        align-items: center;
+        padding: 56px 0;
+      }
+
+      .eyebrow {
+        margin-bottom: 16px;
+        color: var(--accent);
+        font-size: 14px;
+        font-weight: 900;
+      }
+
+      h1 {
+        max-width: 780px;
+        margin: 0 0 22px;
+        font-size: clamp(42px, 7vw, 78px);
+        line-height: 0.98;
+        letter-spacing: 0;
+      }
+
+      .lead {
+        max-width: 700px;
+        margin: 0;
+        color: var(--muted);
+        font-size: 20px;
+        line-height: 1.5;
+      }
+
+      .actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 24px;
+      }
+
+      .button {
+        min-height: 44px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid var(--ink);
+        border-radius: 8px;
+        padding: 0 16px;
+        font-weight: 850;
+        text-align: center;
+      }
+
+      .button.primary {
+        background: var(--ink);
+        color: #fff;
+      }
+
+      .panel,
+      .item,
+      .notice {
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: var(--card);
+      }
+
+      .panel {
+        padding: 28px;
+        box-shadow: 0 24px 72px rgb(0 0 0 / 0.1);
+      }
+
+      .price {
+        margin-bottom: 12px;
+        font-size: clamp(58px, 9vw, 92px);
+        line-height: 1;
+        font-weight: 950;
+      }
+
+      .panel p,
+      .item p,
+      .notice {
+        color: var(--muted);
+        line-height: 1.5;
+      }
+
+      .fields {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+        margin-top: 18px;
+      }
+
+      .field {
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: var(--soft);
+        padding: 12px;
+        font-size: 14px;
+        font-weight: 850;
+      }
+
+      section {
+        border-top: 1px solid var(--line);
+        padding: 42px 0;
+      }
+
+      h2 {
+        margin: 0 0 18px;
+        font-size: clamp(30px, 4.5vw, 48px);
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 18px;
+      }
+
+      .item,
+      .notice {
+        padding: 22px;
+      }
+
+      pre {
+        margin: 0;
+        overflow-x: auto;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: #101418;
+        color: #f5f7fa;
+        padding: 18px;
+        font-size: 14px;
+        line-height: 1.45;
+      }
+
+      footer {
+        border-top: 1px solid var(--line);
+        padding: 28px 0 40px;
+        color: var(--muted);
+        font-size: 14px;
+      }
+
+      @media (max-width: 860px) {
+        header {
+          align-items: flex-start;
+          flex-direction: column;
+          gap: 14px;
+          padding: 18px 0;
+        }
+
+        .hero,
+        .grid,
+        .fields {
+          grid-template-columns: 1fr;
+        }
+
+        .hero {
+          min-height: auto;
+          padding: 42px 0;
+        }
+      }
+
+      @media (max-width: 520px) {
+        h1 {
+          font-size: 36px;
+          line-height: 1.04;
+        }
+
+        .lead {
+          font-size: 18px;
+        }
+
+        .actions .button {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <a class="brand" href="https://github.com/ivelly42/ai-agent-cost-tracker-template">AI Cost Tracker</a>
+      <nav>
+        <a href="COST_TRACKER_TEMPLATE.md">Template</a>
+        <a href="https://ivelly42.github.io/agent-ops-command-center/roi-calculator.html">ROI</a>
+        <a href="https://ivelly42.github.io/agent-ops-command-center/team-checkout-request.html">Fast Request</a>
+      </nav>
+    </header>
+
+    <main>
+      <div class="hero">
+        <div>
+          <div class="eyebrow">GitHub Pages mirror</div>
+          <h1>AI agent cost tracker template for ROI-visible work.</h1>
+          <p class="lead">A public discovery mirror for Agent Ops Command Center, built for teams that need Codex, Claude Code, Cursor, and local-agent cost to be compared against saved cleanup time.</p>
+          <div class="actions">
+            <a class="button primary" href="https://ivelly42.github.io/agent-ops-command-center/team-checkout-request.html">Fast $203 team request</a>
+            <a class="button" href="COST_TRACKER_TEMPLATE.md">Open free template</a>
+            <a class="button" href="https://ivelly42.github.io/agent-ops-command-center/roi-calculator.html">Open ROI calculator</a>
+          </div>
+        </div>
+        <aside class="panel">
+          <div class="price">$29</div>
+          <p>Individual early access. Seven seats are $203, so one confirmed team payment clears the $200 gross target only after checkout, receipt, payout, or seller-dashboard proof exists.</p>
+          <div class="fields">
+            <div class="field">Estimated Tokens</div>
+            <div class="field">Direct Cost</div>
+            <div class="field">Minutes Saved</div>
+            <div class="field">Net Value</div>
+            <div class="field">Cost Leak</div>
+            <div class="field">ROI Notes</div>
+          </div>
+        </aside>
+      </div>
+
+      <section>
+        <h2>Copy/Paste Cost Row</h2>
+        <pre>| Date | Agent | Model | Task | Estimated Tokens | Direct Cost | Human Minutes Saved | ROI Notes |
+| --- | --- | --- | --- | ---: | ---: | ---: | --- |
+|  | Codex Implementation Agent | GPT-5.5 | Small bug fix | 25000 | $0.00 | 45 | Good ROI if verified |</pre>
+      </section>
+
+      <section>
+        <h2>What The Full Pack Adds</h2>
+        <div class="grid">
+          <article class="item">
+            <h3>Cost tracker</h3>
+            <p>Compare agent cost, review time, and human cleanup time in one reusable record.</p>
+          </article>
+          <article class="item">
+            <h3>Verification ledger</h3>
+            <p>Keep ROI claims tied to exact commands, screenshots, release assets, and payment gates.</p>
+          </article>
+          <article class="item">
+            <h3>Team request path</h3>
+            <p>Route one seven-seat $203 team license request through proof, approval, delivery, and revenue rules.</p>
+          </article>
+        </div>
+      </section>
+
+      <section>
+        <h2>Revenue Rule</h2>
+        <div class="notice">This mirror, page views, GitHub stars, preview downloads, and order intent are not revenue. Revenue is counted only from checkout, receipt, payout, or seller-dashboard evidence.</div>
+      </section>
+    </main>
+
+    <footer>
+      Public discovery mirror. Private paid ZIP. Revenue only after payment proof.
+    </footer>
+  </body>
+</html>

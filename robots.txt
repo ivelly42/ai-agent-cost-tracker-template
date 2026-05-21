@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ivelly42.github.io/ai-agent-cost-tracker-template/sitemap.xml
