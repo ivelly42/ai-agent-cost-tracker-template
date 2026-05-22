@@ -71,5 +71,6 @@ Agent Ops Command Center expands this free tracker into a full Notion-ready work
 - Cost tracker page: https://ivelly42.github.io/agent-ops-command-center/cost-tracker-template.md
 - ROI calculator: https://ivelly42.github.io/agent-ops-command-center/roi-calculator.html
 - Cost leak audit: https://ivelly42.github.io/agent-ops-command-center/cost-leak-audit.html
-- Fast $203 team request: https://ivelly42.github.io/agent-ops-command-center/team-checkout-request.html
+- Primary $203 team request URL: https://ivelly42.github.io/agent-ops-command-center/team-request-url.html
+- Checkout status: https://ivelly42.github.io/agent-ops-command-center/checkout-status.json
 - Buy page: https://ivelly42.github.io/agent-ops-command-center/buy.html

@@ -8,11 +8,13 @@
   "cost_tracker_page": "https://ivelly42.github.io/agent-ops-command-center/cost-tracker-template.md",
   "roi_calculator": "https://ivelly42.github.io/agent-ops-command-center/roi-calculator.html",
   "cost_leak_audit": "https://ivelly42.github.io/agent-ops-command-center/cost-leak-audit.html",
-  "fast_team_checkout_request": "https://ivelly42.github.io/agent-ops-command-center/team-checkout-request.html",
+  "fast_team_checkout_request": "https://ivelly42.github.io/agent-ops-command-center/team-request-url.html",
   "buy_page": "https://ivelly42.github.io/agent-ops-command-center/buy.html",
   "catalog": "https://ivelly42.github.io/agent-ops-command-center/catalog.json",
   "metrics": "https://ivelly42.github.io/agent-ops-command-center/metrics/status.json",
   "main_repository": "https://github.com/ivelly42/agent-ops-command-center",
   "paid_zip_public": false,
-  "revenue_rule": "Revenue is proven only by checkout, receipt, payout, or seller-dashboard evidence."
+  "revenue_rule": "Revenue is proven only by checkout, receipt, payout, or seller-dashboard evidence.",
+  "primary_request_url": "https://ivelly42.github.io/agent-ops-command-center/team-request-url.html",
+  "checkout_status": "https://ivelly42.github.io/agent-ops-command-center/checkout-status.json"
 }

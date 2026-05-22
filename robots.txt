@@ -2,3 +2,5 @@ User-agent: *
 Allow: /
 
 Sitemap: https://ivelly42.github.io/ai-agent-cost-tracker-template/sitemap.xml
+Primary-Team-Request: https://ivelly42.github.io/agent-ops-command-center/team-request-url.html
+Checkout-Status: https://ivelly42.github.io/agent-ops-command-center/checkout-status.json
